@@ -1,7 +1,7 @@
 {
   "name": "stonkshub",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,13 +10,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^9.0.0",
     "@phosphor-icons/react": "^2.1.10",
     "axios": "^1.13.3",
     "bootstrap": "^5.3.8",
     "react": "^19.2.0",
     "react-bootstrap": "^2.10.10",
+    "react-clock": "^6.0.0",
     "react-dom": "^19.2.0",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.13.0",
+    "react-slot-counter": "^3.3.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

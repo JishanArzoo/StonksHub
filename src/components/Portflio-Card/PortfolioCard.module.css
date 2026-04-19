@@ -1,0 +1,45 @@
+.card{
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1); /* translucent */
+  backdrop-filter: blur(15px);          /* 🔥 main effect */
+  -webkit-backdrop-filter: blur(15px);  /* Safari */
+  
+  border-radius:16px ;
+  backdrop-filter: blur(20px) saturate(180%);
+
+  aspect-ratio: auto;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.tickerTitle{
+
+}
+.cardContent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 2px;
+    column-gap: 7px;
+    justify-content: space-between;
+}
+.cardContentItems{
+   
+}

@@ -1,0 +1,227 @@
+.Container{
+    display: grid;
+  grid-template-columns: repeat(100, 1fr); /* 4 columns */
+  grid-template-rows: repeat(100, 1fr);  /* 3 rows */
+  gap: 0px;
+  flex: 1;
+}
+.subContainer{
+    grid-column: 1/-1;
+    grid-row: 6/-1;
+}
+.symbolInfo{
+grid-column: 2/100;
+grid-row: 3/32;
+/* background: white; */
+ background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  border-radius: 16px;
+
+  transform: translateZ(0);
+  will-change: transform;
+
+  isolation: isolate;
+}
+.symbolInfo::before{
+content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.symbolInfo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.08)
+  );
+}
+.companyInfo{
+grid-column: 2/30;
+grid-row: 33/98;
+padding: 5px;
+
+ background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  border-radius: 16px;
+
+  transform: translateZ(0);
+  will-change: transform;
+
+  isolation: isolate;
+}
+.companyInfo::before{
+content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.companyInfo::after{
+content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.08)
+  );
+}
+.techInfo{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* background: wheat; */
+    /* scale: 50%; */
+grid-column: 31/60;
+grid-row: 33/98;
+
+ background: rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+  border-radius: 16px;
+
+  transform: translateZ(0);
+  will-change: transform;
+
+  isolation: isolate;
+}
+.techInfo::before{
+content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.techInfo::after{
+ content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.08)
+  );
+}
+.placeOrder{
+grid-column: 61/100;
+grid-row: 33/98;
+background: rgba(255, 255, 255, 0.06); /* translucent */
+   backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+
+   transform: translateZ(0);
+  will-change: transform;
+   isolation: isolate;
+   
+  border-radius:16px ;
+}
+.placeOrder::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.placeOrder::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.15),
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.08)
+  );
+}
+.stockOrder{
+  width: 80%;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+}
+.stockOrderCounterButton{
+  background: rgba(55, 55, 55, 0.4); /* translucent */
+  backdrop-filter: blur(15px);          /* 🔥 main effect */
+  border: 0 none transparent;
+  border-radius: 100px;
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stockOrderCounterButton:hover{
+  scale: 95%;
+}
+.stockOrderButtons{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  flex-direction: column;
+}
+.stockOrderButtonsLoading{
+   width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:  start;
+  flex-direction: column;
+}
+.orderButton{
+  border-radius: 100px;
+  padding: 0.8vw 1.95vw 0.8vw 1.95vw;
+  scale: 120%;
+}

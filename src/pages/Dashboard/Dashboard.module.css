@@ -1,0 +1,254 @@
+.Container{
+    display: grid;
+  grid-template-columns: repeat(100, 1fr); /* 4 columns */
+  grid-template-rows: repeat(100, 1fr);  /* 3 rows */
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+}
+.personalInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    grid-column: 2/45;
+    grid-row: 3/29 ;
+    font-size: 1.3vw;
+    border-radius: 20px;
+    padding-left: 2vw;
+    color: whitesmoke;
+
+     background: rgba(255, 255, 255, 0.1); /* translucent */
+  backdrop-filter: blur(15px);          /* 🔥 main effect */
+  -webkit-backdrop-filter: blur(15px);  /* Safari */
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3); /* liquid shine */
+
+  /* padding: 20px; */
+
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(20px) saturate(180%);
+
+}
+.personalInfo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.05)
+  );
+
+  pointer-events: none;
+}
+.personalInfo:hover {
+  transform: scale(98%);
+  transition-duration: 100ms;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+}
+.pInfoItem{
+    display: flex;
+    align-items: center;
+}
+.wallet{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    background-color: wheat;
+    color: white;
+    grid-column: 46/70;
+    grid-row: 3/29;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+
+
+     background: rgba(255, 255, 255, 0.1); /* translucent */
+  backdrop-filter: blur(15px);          /* 🔥 main effect */
+  -webkit-backdrop-filter: blur(15px);  /* Safari */
+
+
+
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3); /* liquid shine */
+
+  /* padding: 20px; */
+
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(20px) saturate(180%);
+}
+.wallet::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.4),
+    rgba(255,255,255,0.05)
+  );
+
+  pointer-events: none;
+}
+.walletItem1{
+  font-size: 2.1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.walletInfoIcon{
+  cursor: pointer;
+}
+.walletInfoIcon:hover{
+  transform: scale(90%);
+  transition-duration: 200ms;
+}
+.walletItem2{
+  width: 100%;
+  height: 100%;
+  font-size: 1.5vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-grow: 1;
+  align-items: center;
+  /* cursor: pointer; */
+}
+.walletAddBadge{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+    background: rgba(255, 255, 255, 0.1); /*translucent*/
+  backdrop-filter: blur(15px);          
+  -webkit-backdrop-filter: blur(15px);  /* Safari */
+  
+   box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.walletAddBadge:hover{
+  transform: scale(90%);
+  transition-duration: 300ms;
+}
+.drawer{
+  width: 500px !important;
+}
+.heatMap{
+grid-column: 2/70 ;
+grid-row: 30/98 ;
+}
+.tickerTape{
+grid-column: 71/100;
+grid-row: 4/70;
+}
+
+.orders{
+grid-column: 71/85;
+grid-row: 71/98;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 1.21vw;
+    background: rgba(255, 255, 255, 0.1); /* translucent */
+  backdrop-filter: blur(15px);          /* 🔥 main effect */
+  -webkit-backdrop-filter: blur(15px);  /* Safari */
+   box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3); /* liquid shine */
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius:16px ;
+  backdrop-filter: blur(20px) saturate(180%);
+}
+.ordersBadge{
+   cursor: pointer;
+  display: flex;
+  font-size: 0.68vw;
+  justify-content: space-around;
+  align-items: center;
+    background: rgba(255, 255, 255, 0.1); /*translucent*/
+  backdrop-filter: blur(15px);          
+  -webkit-backdrop-filter: blur(15px);  /* Safari */
+  
+   box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.ordersBadge:hover{
+    transform: scale(90%);
+  transition-duration: 300ms;
+}
+
+.positions{
+grid-column: 86/100;
+grid-row: 71/98;
+    background: rgba(255, 255, 255, 0.1); /* translucent */
+  backdrop-filter: blur(15px);          /* 🔥 main effect */
+  -webkit-backdrop-filter: blur(15px);  /* Safari */
+   box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3); /* liquid shine */
+  border: 1px solid rgba(255,255,255,0.3);
+   border-radius:16px ;
+  backdrop-filter: blur(20px) saturate(180%);
+  display: flex;
+justify-content: center;
+align-items: center;
+padding: 1.05vw;
+}
+
+.positionsBadge{
+cursor: pointer;
+font-size: 0.68vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+    background: rgba(255, 255, 255, 0.1); /*translucent*/
+  backdrop-filter: blur(15px);          
+  -webkit-backdrop-filter: blur(15px);  /* Safari */
+  
+   box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.positionsBadge:hover{
+   transform: scale(90%);
+  transition-duration: 300ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.parentDiv{
+    width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+    flex: 1;
+}
+
+.newsRow{
+    width: 30vw;
+    height: 35vh;
+}

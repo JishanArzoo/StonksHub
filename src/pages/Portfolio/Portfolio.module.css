@@ -1,0 +1,30 @@
+.container{
+padding: 5vh;
+overflow-x: hidden;
+}
+.positionsList{
+      display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.positionsList > * {
+    flex: 1 1 calc(25% - 16px);
+     max-width: calc(25% - 16px);
+}
+.headingDiv{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 2vw 0;
+}
+
+.floatIcon {
+  display: inline-block;
+  animation: floatY 2s ease-in-out infinite;
+}
+
+@keyframes floatY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-6px); } /* move up */
+  100% { transform: translateY(0); }
+}

@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,4 +65,17 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+   /* background: linear-gradient(to top left, #1e3c72, red, white, #2a5298, blue, green, yellow); */
+   background: linear-gradient(135deg, #0f172a, #1e3a8a, #0ea5e9);
+  
+}
+#root {
+  width: 100%;
+  height: auto;
 }
