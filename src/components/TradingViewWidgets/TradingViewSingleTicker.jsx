@@ -3,6 +3,7 @@ import React, { useEffect, useRef, memo } from 'react';
 
 function TradingViewSingleTicker(props) {
   const container = useRef();
+   const redirect = import.meta.env.VITE_TV_REDIRECT;
 
   useEffect(
     () => {
@@ -17,7 +18,7 @@ function TradingViewSingleTicker(props) {
           "isTransparent": true,
           "locale": "en",
           "width": "100%",
-          "largeChartUrl" : "http://localhost:5173/trade"
+          "largeChartUrl" : "${redirect}"
         }`;
       container.current.appendChild(script);
     },

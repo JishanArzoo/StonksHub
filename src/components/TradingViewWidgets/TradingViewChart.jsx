@@ -3,7 +3,7 @@ import React, { useEffect, useRef, memo } from 'react';
 
 function TradingViewChart(props) {
   const container = useRef();
-
+  const redirect = import.meta.env.VITE_TV_REDIRECT;
   useEffect(
     () => {
       const script = document.createElement("script");

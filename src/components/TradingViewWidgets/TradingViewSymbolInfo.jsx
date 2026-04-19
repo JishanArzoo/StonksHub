@@ -27,7 +27,7 @@ function TradingViewWidget(props) {
   return (
     <div className={`tradingview-widget-container ${style.smbInfoWidgetContainer}`} ref={container}>
       <div className="tradingview-widget-container__widget"></div>
-      <div className="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener nofollow" target="_blank"></a></div>
+      
     </div>
   );
 }

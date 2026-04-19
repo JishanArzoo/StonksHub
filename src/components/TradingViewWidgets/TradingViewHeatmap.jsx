@@ -3,6 +3,7 @@ import React, { useEffect, useRef, memo } from 'react';
 
 function TradingViewHeatmap() {
   const container = useRef();
+   const redirect = import.meta.env.VITE_TV_REDIRECT;
 
   useEffect(
     () => {
@@ -17,7 +18,7 @@ function TradingViewHeatmap() {
           "blockColor": "change",
           "grouping": "sector",
           "locale": "en",
-          "symbolUrl": "http://localhost:5173/trade",
+          "symbolUrl": "${redirect}",
           "colorTheme": "dark",
           "exchanges": [
             "NYSE",
