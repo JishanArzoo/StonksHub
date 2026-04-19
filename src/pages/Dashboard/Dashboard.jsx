@@ -220,7 +220,8 @@ const Dashboard =  () => {
             <TradingViewHeatmap  />
           </div>
           <div className={style.tickerTape}>
-            <tv-ticker-tape symbols="NASDAQ:AAPL,NASDAQ:MSFT,NASDAQ:AMZN,NASDAQ:GOOGL,NASDAQ:TSLA,NASDAQ:NVDA,NASDAQ:META,NYSE:BRK.B,NYSE:JPM,NYSE:KO" direction="vertical" item-size="compact" symbol-url={redirect}></tv-ticker-tape>
+            {/* <tv-ticker-tape symbols="NASDAQ:AAPL,NASDAQ:MSFT,NASDAQ:AMZN,NASDAQ:GOOGL,NASDAQ:TSLA,NASDAQ:NVDA,NASDAQ:META,NYSE:BRK.B,NYSE:JPM,NYSE:KO" direction="vertical" item-size="compact" symbol-url={redirect}></tv-ticker-tape> */}
+               <TradingViewNews />
           </div>
           <div className={style.orders}>
             <Grid container spacing={2}>
