@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Container, Dropdown, DropdownButton, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { Link, useNavigate} from 'react-router-dom'
 import { List } from '@phosphor-icons/react'
-import style from "./Navbar.module.css"
+import style from "./NavBar.module.css"
 import StonksHub_Photo from "../../assets/StonksHub_Trademark.png"
 import shGIF from "../../assets/StonksHubGIF.gif"
 import axios from 'axios'
