@@ -67,7 +67,7 @@ function Login() {
           </Form>
           
           <p className="mt-3 text-center">
-            New user? <a  onClick={() => navigate("/register")} style={{color: "navy"}}>Register</a>
+            New user? <a  onClick={() => navigate("/register")} style={{color: "navy", cursor: "pointer", textDecoration: "underline"}}>Register</a>
           </p>
         </Card.Body>
       </Card>
