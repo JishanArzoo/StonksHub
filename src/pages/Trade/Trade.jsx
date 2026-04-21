@@ -187,6 +187,7 @@ const Trade = () => {
                      paddingBottom: "40px",
                      borderRadius: "60px",
                      fontFamily: "monospace",
+                     color: "white"
                     //  color: `${holding?.market_value > holding?.cost_basis ? "green" : "red"}`
 
                     }}
@@ -203,11 +204,12 @@ const Trade = () => {
                      paddingTop: "37px",
                      paddingBottom: "37px",
                      borderRadius: "60px",
-                     fontFamily: "monospace"
+                     fontFamily: "monospace",
+                     color: "white"
 
                     }}
                     label={`${holding? holding.qty : "0"} Open Positions `}
-                    icon={<HashIcon size={50} weight='duotone'/>}
+                    icon={<HashIcon size={50} weight='duotone' fill={"white"}/>}
                     
                     />
 
@@ -230,7 +232,8 @@ const Trade = () => {
                             padding: "2.3vw",
                             paddingLeft: "0px",
                             paddingRight: "10px",
-                            borderRadius: "200px"
+                            borderRadius: "200px",
+                            color: "white"
                         }}
                         avatar={<Avatar sx={{padding: "25px"}}>{ticker}</Avatar>}
                         label={qty}
