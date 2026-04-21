@@ -67,7 +67,7 @@ function Login() {
           </Form>
           
           <p className="mt-3 text-center">
-            New user? <a href="" onClick={() => navigate("/register)} style={{color: "navy"}}>Register</a>
+            New user? <a href="" onClick={() => navigate("/register")} style={{color: "navy"}}>Register</a>
           </p>
         </Card.Body>
       </Card>
