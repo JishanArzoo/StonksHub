@@ -28,6 +28,7 @@ function NavBar_pr() {
            setUser(true)
          } else{
            console.log("Not Signed in!")
+           setUser(false)
          } 
        })
        .finally(() => {
