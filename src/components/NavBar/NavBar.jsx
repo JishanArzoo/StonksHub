@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Dropdown, DropdownButton, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { Link, useNavigate} from 'react-router-dom'
 import { List } from '@phosphor-icons/react'
@@ -9,7 +9,38 @@ import axios from 'axios'
 
 
 function NavBar_pr() {
+  const [user, setUser] = useState(false)
   const apiUrl  = import.meta.env.VITE_API_URL;
+
+  useEffect(() => {
+       let timeout;
+
+     const fetchData = () => {
+ 
+       Promise.allSettled([
+     axios.get(`${apiUrl}/api/v1/users/get-user`, {
+       withCredentials: true
+     })
+ 
+       ])
+       .then(([res1, res2, res3, res4]) => {
+         if(res1?.value?.data?.success == true){
+           setUser(true)
+         } else{
+           console.log("Not Signed in!")
+         } 
+       })
+       .finally(() => {
+         timeout = setTimeout(fetchData, 5000)
+       })
+ 
+ 
+     }    
+     fetchData();
+      return () => {
+       clearTimeout(timeout)
+     };
+   }, []);
 
  const navigate = useNavigate()
  const [dropdownOpen, setDropdownOpen] = useState(false)
@@ -49,7 +80,7 @@ function NavBar_pr() {
             
           <Nav.Link href='#' className={`${style.navilinkoMAIN}`} onClick={() => navigate("/dashboard")}>Dashboard</Nav.Link>
           <Nav.Link href='#' className={`${style.navilinkoMAIN}`} onClick={() => navigate("/portfolio")}>Portfolio</Nav.Link>
-          <Nav.Link href='#' className={`${style.navilinkoMAIN}`} onClick={() => handleLogOut()}>Log-out</Nav.Link>
+          {user? <Nav.Link href='#' className={`${style.navilinkoMAIN}`} onClick={() => handleLogOut()}>Log-out</Nav.Link> : <></>}
           
 
           
